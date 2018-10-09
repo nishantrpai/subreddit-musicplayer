@@ -62,7 +62,7 @@ const playYoutubeURL = function(urls) {
 }
 
 const askSubreddit = function() {
-  rl.question('Which sub?',(answer)   => {
+  rl.question('Which sub?\n',(answer)   => {
     fetchSubreddit(answer)
       .then((urls) => playYoutubeURL(urls[0].urls))
       .catch((err) => console.error(err));
